@@ -1,28 +1,24 @@
-== README
+# Locale
+### GA WDI Project 3
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Synopsis
+===
+Hyperlocal app that uses geo-location to discover local events, activites, messages, and other social media content.  User will use a mobile first responsive web app to discover and post messages and comments for other users to discover.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+MVP
+===
+* GPS location aware
+* Discover messages
+* Post message
+* Comments
+* Instagram Feed of local pictures
+* Twitter Feed of local tweets
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Version2
+===
+* Foursquare Feed of local checkins
+* what2do Feed of local cheap events
+* History Feed of current location
+* Augment reality
+

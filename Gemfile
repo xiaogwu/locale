@@ -38,7 +38,7 @@ gem 'jquery-rails'
 
 # OmniAuth
 gem 'omniauth-identity'
-gem 'omniquth-twitter'
+gem 'omniauth-twitter'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

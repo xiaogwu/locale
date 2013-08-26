@@ -27,6 +27,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.13)
+    bcrypt-ruby (3.1.2)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -50,6 +51,14 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
+    haml (4.0.3)
+      tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
+    hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.5)
     jbuilder (1.5.0)
@@ -69,6 +78,12 @@ GEM
     multi_json (1.7.9)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-identity (1.1.1)
+      bcrypt-ruby (~> 3.0)
+      omniauth (~> 1.0)
     pg (0.16.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -151,8 +166,10 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   factory_girl_rails
+  haml-rails
   jbuilder (~> 1.2)
   jquery-rails
+  omniauth-identity
   pg
   pry-rails
   rails (= 4.0.0)

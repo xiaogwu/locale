@@ -24,3 +24,5 @@ doc/
 .idea
 .powenv
 .secret
+Procfile
+.env

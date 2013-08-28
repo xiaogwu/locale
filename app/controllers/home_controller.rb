@@ -4,4 +4,14 @@ class HomeController < ApplicationController
 
   def map
   end
+
+  def twitter
+  end
+
+  def instagram
+  end
+
+  def foursquare
+  end
+
 end

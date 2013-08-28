@@ -3,6 +3,8 @@ Locale::Application.routes.draw do
   #Root
   root 'home#index'
 
+  get '/map', to: 'home#map'
+
   #Omniauth callback
   get 'auth/:provider/callback', to: 'sessions#create'
 

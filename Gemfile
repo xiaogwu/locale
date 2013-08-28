@@ -37,8 +37,10 @@ gem 'haml-rails'
 gem 'jquery-rails'
 
 # OmniAuth
-gem 'omniauth-identity'
-gem 'omniauth-twitter'
+# gem 'omniauth-identity'
+# gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

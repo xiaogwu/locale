@@ -12,6 +12,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry-rails'
   gem 'factory_girl_rails'
+  gem 'rails-erd'
 end
 
 group :production do

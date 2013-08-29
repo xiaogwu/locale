@@ -1,0 +1,6 @@
+%br
+%br
+- @trending_venues.venues.each do |venue|
+	= image_tag("#{venue.categories.first.icon}")
+	= venue.name 
+	%br

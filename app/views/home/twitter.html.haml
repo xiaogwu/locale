@@ -1,0 +1,9 @@
+= @lat_lng
+%br
+- @tweets.each do |tweet|
+  = image_tag("#{tweet[:user][:profile_image_url]}")
+  %strong= "@#{tweet[:user][:screen_name]}: "
+  = tweet[:text]
+  = tweet[:geo][:coordinates] unless tweet[:geo].nil?
+  %br
+

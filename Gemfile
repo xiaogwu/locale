@@ -44,6 +44,9 @@ gem 'angularjs-rails'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
+# Twitter API
+gem 'twitter'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 

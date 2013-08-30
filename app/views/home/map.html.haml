@@ -1,1 +1,55 @@
-Welomce to the Map Page
+#map{:style => "width:100%; height:100%; position:absolute;"}
+
+:javascript
+  // initialize map
+  //var map = L.map('map').setView([37.7577, -122.4376], 13);
+
+  //L.tileLayer('http://{s}.tile.cloudmade.com/dc110df5a8fa4f72ab755526e9ae8146/997/256/{z}/{x}/{y}.png', {
+      //attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+      //maxZoom: 18
+  //}).addTo(map);
+
+
+  var base_layer = new L.tileLayer(
+    'http://{s}.tile.cloudmade.com/dc110df5a8fa4f72ab755526e9ae8146/997/256/{z}/{x}/{y}.png', {
+    attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+    maxZoom: 18
+     }
+  );
+
+  var map = new L.map('map', {
+    layers: [base_layer],
+    center: [37.7577, -122.4376],
+    zoom: 13,
+    zoomControl: true
+  });
+
+  L.control.locate({
+    follow: true,
+    stopFollowingOnDrag: true
+  }).addTo(map);
+
+
+
+  // Store Geolocation into cookie
+  function setGeoCookie(position) {
+    //console.log(position.lat);
+    //console.log(position.lng);
+    var cookie_val = position.lat + "|" + position.lng;
+    //console.log(cookie_val);
+    document.cookie = "lat_lng=" + escape(cookie_val);
+    //console.log(cookie_val);
+  }
+
+  // Click on map show
+  var mymarker = L.marker();
+
+  function onMapClick(e) {
+    mymarker
+          .setLatLng(e.latlng)
+          .addTo(map);
+    setGeoCookie(e.latlng);
+  }
+
+  map.on('click', onMapClick);
+

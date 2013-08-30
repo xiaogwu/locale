@@ -9,8 +9,9 @@ Locale::Application.routes.draw do
   get '/instagram', to: 'home#instagram'
   get '/foursquare', to: 'home#foursquare'
 
-  #Messages Controller
-  get '/messages', to: 'messages#index'
+  #Posts Controller
+  get '/posts', to: 'posts#index'
+  resources :posts
 
   #Omniauth callback
   get 'auth/:provider/callback', to: 'sessions#create'

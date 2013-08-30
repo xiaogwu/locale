@@ -36,6 +36,7 @@ gem 'haml-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'angularjs-rails'
 
 # OmniAuth
 # gem 'omniauth-identity'

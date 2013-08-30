@@ -7,8 +7,12 @@
 }
 
 .leaflet-control-locate a {
+	position: relative;
+	top: 3px;
 	background-image: url(images/locate.png);
-	background-position: -2px -2px;
+	background-position: -4.75px -4.5px;
+	padding: 6px 10px 0 10px;
+	border-radius: 3px;
 }
 
 .leaflet-touch .leaflet-control-locate a {
@@ -18,6 +22,7 @@
 .leaflet-control-locate.requesting a {
 	background-image: url(images/spinner.gif);
 	background-position: 50% 50%;
+	background-repeat: none;
 }
 
 .leaflet-control-locate.active a {
@@ -25,10 +30,10 @@
 }
 
 .leaflet-control-locate.active.following a {
-	background-position: -62px -2px;
+	background-position: -64.75px -4.5px;
 }
 
 .leaflet-touch .leaflet-control-locate {
 	box-shadow: none;
-	border: 4px solid rgba(0,0,0,0.3);
+	border: 3px solid rgba(0,0,0,0.3);
 }

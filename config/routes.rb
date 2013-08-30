@@ -10,7 +10,6 @@ Locale::Application.routes.draw do
   get '/foursquare', to: 'home#foursquare'
 
   #Posts Controller
-  get '/posts', to: 'posts#index'
   resources :posts
 
   #Omniauth callback

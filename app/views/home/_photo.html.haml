@@ -1,0 +1,5 @@
+.local-image{:id => "local-image#{photo.id}"}
+	= image_tag("#{photo.images.standard_resolution.url}")
+	%br 
+	=raw "#{photo.user.username} |" 
+	= photo.caption ? "#{photo.caption.text}" : ""

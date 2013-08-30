@@ -3,10 +3,14 @@ Locale::Application.routes.draw do
   #Root
   root 'home#index'
 
+  #Home Controller 
   get '/map', to: 'home#map'
   get '/twitter', to: 'home#twitter'
   get '/instagram', to: 'home#instagram'
   get '/foursquare', to: 'home#foursquare'
+
+  #Posts Controller
+  resources :posts
 
   #Omniauth callback
   get 'auth/:provider/callback', to: 'sessions#create'

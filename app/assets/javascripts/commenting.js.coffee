@@ -11,11 +11,10 @@ WDI.app = angular.module("Poster", ["ngResource", 'WDI.factories'])
     $scope.newPost = {}
 ]
 
-@CommentingCtrl = ["$scope", "Comment", ($scope, Comment) ->
-  $scope.comments = Comment.query()
-
-  $scope.addComment = ->
-    comment = Comment.save($scope.newComment)
-    $scope.comments.push(comment)
-    $scope.newComment = {}
-]
+# @CommentingCtrl = ["$scope", "Comment", ($scope, Comment) ->
+#  $scope.comments = Comment.query()
+  # $scope.addComment = ->
+  #   comment = Comment.save($scope.newComment)
+  #   $scope.comments.push(comment)
+  #   $scope.newComment = {}
+# ]

@@ -12,3 +12,8 @@ WDI.app = angular.module("Poster", ["ngResource", 'WDI.factories'])
 
 ]
 
+@CommentingCtrl = ["$scope", "Comment", ($scope, Comment) ->
+	$scope.comments = Comment.query()
+
+  
+]

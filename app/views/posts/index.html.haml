@@ -13,3 +13,10 @@
           %li
             {{comment.text}}
 
+%br
+%br
+
+= render partial: 'json' 
+/ formats: {[:json]} 
+
+/ = render partial: 'form', locals: { count: @count}

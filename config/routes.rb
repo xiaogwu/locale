@@ -10,7 +10,9 @@ Locale::Application.routes.draw do
   get '/foursquare', to: 'home#foursquare'
 
   #Posts Controller
-  resources :posts, :has_many => :comments 
+  resources :posts do 
+    resources :comments
+  end 
 
   #Omniauth callback
   get 'auth/:provider/callback', to: 'sessions#create'

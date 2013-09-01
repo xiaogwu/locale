@@ -5,13 +5,15 @@
     %strong Submit a new post:
     %form{"ng-submit" => "addPost()"}
       %input{"ng-model" => "newPost.body", :type => "text"}
-        <input type="submit" value: "Add">
+        %input{"type" => "submit", "value" => "Add Post"}
     %ul
       %li{"ng-repeat" => "post in posts"}
         {{post.body}}
         %ul{"ng-repeat" => "comment in post.comments"}
-          %li
-            {{comment.text}}
+          %li  {{comment.text}}
+        %ul
+          %li 
+            %strong Write a comment...
 
 %br
 %br

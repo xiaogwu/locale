@@ -13,7 +13,9 @@
           %li  {{comment.text}}
         %ul
           %li 
-            %strong Write a comment...
+            %form{"ng-submit" => "addPost()"}>
+              %input{"ng-model" => "newPost.body", :type => "text"}>
+                %input{"type" => "submit", "value" => "Add Comment"}>
 
 %br
 %br

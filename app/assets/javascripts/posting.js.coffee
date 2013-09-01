@@ -11,3 +11,4 @@ WDI.app = angular.module("Poster", ["ngResource", 'WDI.factories'])
     $scope.newPost = {}
 
 ]
+

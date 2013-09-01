@@ -1,0 +1,15 @@
+%br
+%br
+%div{"ng-app" => "Poster"}
+  %div{"ng-controller" => "PostingCtrl"}
+    %strong Submit a new post:
+    %form{"ng-submit" => "addPost()"}
+      %input{"ng-model" => "newPost.body", :type => "text"}
+        <input type="submit" value: "Add">
+    %ul
+      %li{"ng-repeat" => "post in posts"}
+        {{post.body}}
+        %ul{"ng-repeat" => "comment in post.comments"}
+          %li
+            {{comment.text}}
+

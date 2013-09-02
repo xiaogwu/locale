@@ -7,9 +7,9 @@ factoriesModule.factory "Post", ["$resource", ($resource) ->
 ]
 
 factoriesModule.factory "Comment", ["$resource", ($resource) ->
-  $resource("/posts/46/comments/:id", {id: "@id"},
+  $resource("/posts/:post_id/comments/:id", {id: "@id", post_id: "@commentable_id"},
     index:  { method: 'GET',  url: '/posts/:post_id/comments', isArray: true },
     create: { method: 'POST', url: '/posts/:post_id/comments' },
-    update: {method: "PUT"}
+    update: { method: "PUT"}
   )
 ]

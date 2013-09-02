@@ -12,9 +12,8 @@
 #
 
 class Comment < ActiveRecord::Base
-  belongs_to :commentable, polymorphic: true
+  belongs_to :post
   belongs_to :user
-  has_many :comments, as: :commentable
 
-  validates_presence_of :text, :commentable
+  validates_presence_of :text, :post
 end

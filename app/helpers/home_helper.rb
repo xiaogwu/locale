@@ -4,7 +4,11 @@ module HomeHelper
 		now = DateTime.now.to_time.to_i
 		seven_days_ago = now - 583200 #approximately seven days in unix time
 		seven_days_ago
-	end 
+	end
+
+	# def break_hash_tags
+	# 	@photos
+	# end 
 
 	def initialize_foursquare_client
 		client = Foursquare2::Client.new(

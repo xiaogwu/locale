@@ -1,15 +1,30 @@
 %br
-%br
 %div{"ng-app" => "Poster"}
+  
+  //add posts
   %div{"ng-controller" => "PostingCtrl"}
     %strong Submit a new post:
     %form{"ng-submit" => "addPost()"}
       %input{"ng-model" => "newPost.body", :type => "text"}
-        <input type="submit" value: "Add">
-    %ul
-      %li{"ng-repeat" => "post in posts"}
-        {{post.body}}
+        %input{"type" => "submit", "value" => "Add Post"}
+    
+    //list posts
+    <div class = "ng-cloak">
+    %ul{"ng-repeat" => "post in posts"}
+      %li{:class => "post", :id => "post-{{post.id}}"} 
+        {{post.body}}     
         %ul{"ng-repeat" => "comment in post.comments"}
-          %li
-            {{comment.text}}
+          %li  {{comment.text}}
+        %ul
+          %li 
+            %form{"ng-submit" => "addComment(post.id, newComment)"}>
+              %input{"ng-model" => "newComment.text", :type => "text"}>
+                %input{"type" => "submit", "value" => "Add Comment"}>
+    </div>
+     
+%br
+%br
 
+/ formats: {[:json]} 
+
+/ = render partial: 'form', locals: { count: @count}

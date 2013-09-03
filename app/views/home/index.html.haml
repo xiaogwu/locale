@@ -1,2 +1,28 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+%section.bck.darkest.landing.text.center.color.white
+  .row
+    .column_10.offset_1
+      %h1
+        %strong> Locale
+      %h2.margin-bottom Come get your local on.
+  .row
+    %h6.text.book
+      Sign in with:
+    %nav.column_10.offset_1.text.center
+
+      %a.button.large.margin-top{:href => "/auth/facebook"}
+        %span.icon.facebook>
+        Facebook
+      %a.button.large.margin-top{:href => "/auth/google_oauth2"}
+        %span.icon.google-plus>
+        Google
+      %a.button.large.margin-top{:href => "/map"}
+        %span.icon.globe>
+        Browse
+  .row
+    .column_6.offset_3.form.subscribe
+
+%footer.bck.white.padding
+  .row.margin-top.margin-bottom
+    .column_4.offset_4.text.center
+      &copy; 2013 Locale
+

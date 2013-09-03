@@ -14,10 +14,9 @@
 ActiveRecord::Schema.define(version: 20130828011850) do
 
   create_table "comments", force: true do |t|
-    t.text     "text",             limit: 300
+    t.text     "text",       limit: 300
     t.integer  "user_id"
-    t.integer  "commentable_id"
-    t.string   "commentable_type"
+    t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

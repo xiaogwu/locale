@@ -3,10 +3,10 @@ class PostsController < ApplicationController
 	respond_to :json
 
 	def index
-		posts = Post.all
+		@posts = Post.all.includes(:comments)
 		respond_to do |format|
-			format.html # show.html.erb
-		  format.json  { render :json => posts }
+			format.html 
+		  format.json { render json: @posts.to_json(include: :comments) }
 		end
 	end 
 
@@ -15,7 +15,8 @@ class PostsController < ApplicationController
 	end 
 
 	def show
-		respond_with Post.find(params[:id])
+		@post = Post.find(params[:id])
+		render json: @post.to_json(include: :comments) 
 	end 
 
 	def edit

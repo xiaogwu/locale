@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
 		p = params[:post_id]
 		c = params[:comment]
 		c.merge!(:post_id=>p)
-		respond_with Comment.create(comment_params)
+		respond_with Comment.create(comment_params), :location => posts_path
 	end 
 
 	def show

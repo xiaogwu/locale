@@ -1,4 +1,4 @@
-.local-image{:id => "#{photo.created_time}"}
+%div{:class => ['column_8', 'offset_2', 'local-image'], :id => "#{photo.created_time}"}
 	= image_tag("#{photo.images.standard_resolution.url}")
 	%br 
 	=raw "#{photo.user.username} |" 

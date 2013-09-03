@@ -1,5 +1,10 @@
-%div{:class => ['column_8', 'offset_2', 'local-image'], :id => "#{photo.created_time}"}
-	= image_tag("#{photo.images.standard_resolution.url}")
-	%br 
-	=raw "#{photo.user.username} |" 
-	= photo.caption ? "#{photo.caption.text}" : ""
+%div{:class => ['column_8', 'offset_3']}
+	%div{:class => 'local-image', :id => "#{photo.created_time}"}
+		= image_tag("#{photo.images.standard_resolution.url}")
+		%br
+		=raw "@#{photo.user.username}"
+		%br
+		= photo.caption ? "#{photo.caption.text}" : ""  
+    %br  
+    - if photo.comments.data.length > 0 
+      = photo.comments.data

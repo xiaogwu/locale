@@ -17,5 +17,6 @@ WDI.app = angular.module("Poster", ["ngResource", 'WDI.factories'])
   $scope.addComment = (post_id, text) ->
     console.log $scope.newComment
     console.log post_id
+    console.log text
     $http.post("/posts/" + post_id + "/comments", text).success alert 'hi' 
 ]

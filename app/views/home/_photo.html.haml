@@ -1,4 +1,4 @@
-.local-image{:id => "local-image#{photo.id}"}
+.local-image{:id => "#{photo.created_time}"}
 	= image_tag("#{photo.images.standard_resolution.url}")
 	%br 
 	=raw "#{photo.user.username} |" 

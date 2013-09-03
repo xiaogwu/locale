@@ -3,7 +3,7 @@ Locale::Application.routes.draw do
   #Root
   root 'home#index'
 
-  #Home Controller 
+  #Home Controller
   get '/map', to: 'home#map'
   get '/twitter', to: 'home#twitter'
   get '/instagram', to: 'home#instagram'

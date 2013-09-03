@@ -11,11 +11,10 @@ WDI.app = angular.module("Poster", ["ngResource", 'WDI.factories'])
     $scope.newPost = {}
 ]
 
-@CommentingCtrl = ["$scope", "Comment", ($scope, Comment) ->
-  $scope.comments = Comment.query()
+@CommentingCtrl = ["$scope", "Comment", "$http", ($scope, Comment, $http) ->
+  $scope.comments = Comment.query({post_id: @post_id, id: @id})
 
-  $scope.addComment = ->
-    comment = Comment.save($scope.newComment)
-    $scope.comments.push(comment)
-    $scope.newComment = {}
+  $scope.addComment = (post_id, data) ->
+    console.log $scope.newComment.text
+    $http.post("/posts/" + post_id + "/comments", data).success alert 'hi' 
 ]

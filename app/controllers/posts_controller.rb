@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 	def index
 		@posts = Post.all.includes(:comments)
 		respond_to do |format|
-			format.html # show.html.erb
+			format.html 
 		  format.json { render json: @posts.to_json(include: :comments) }
 		end
 	end 

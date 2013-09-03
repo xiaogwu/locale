@@ -16,7 +16,7 @@
           %li  {{comment.text}}
         %ul{"ng-controller" => "CommentingCtrl"}
           %li 
-            %form{"ng-submit" => "addComment()"}>
+            %form{"ng-submit" => "addComment(post.id)"}>
               %input{"ng-model" => "newComment.text", :type => "text"}>
                 %input{"type" => "submit", "value" => "Add Comment"}>
 

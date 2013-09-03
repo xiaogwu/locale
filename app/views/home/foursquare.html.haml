@@ -1,8 +1,11 @@
 %br
 %br
 - @trending_venues.venues.each do |venue|
-	= image_tag("#{venue.categories.first.icon}")
-	= venue.name 
+	= image_tag("#{venue.categories.first.icon}") 
+	= venue.name + " |"
+	= venue.location.address + " |"
+	= venue.url 
+	= venue.hereNow.count 
 	%br
 
-= @lat_lng
+= pp @trending_venues.to_json

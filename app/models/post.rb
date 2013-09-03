@@ -14,4 +14,4 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :delete_all, inverse_of: :post
 
   validates_presence_of :body
-end
+ end

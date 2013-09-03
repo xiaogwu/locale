@@ -9,6 +9,9 @@ class CommentsController < ApplicationController
 	end 
 
 	def create
+		p = params[:post_id]
+		c = params[:comment]
+		c.merge!(:post_id=>p)
 		respond_with Comment.create(comment_params)
 	end 
 

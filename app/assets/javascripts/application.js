@@ -17,4 +17,5 @@
 //= require turbolinks
 //= require vendor/leaflet
 //= require vendor/L.Control.Locate
+//= require vendor/tuktuk
 //= require_tree .

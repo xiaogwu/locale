@@ -9,9 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require vendor/leaflet
- *= require vendor/leaflet.ie
  *= require vendor/L.Control.Locate
- *= require vendor/L.Control.Locate.ie
+ *= require vendor/tuktuk
+ *= require vendor/tuktuk.icons
+ *= require vendor/tuktuk.theme
  *= require_self
  *= require_tree .
  */

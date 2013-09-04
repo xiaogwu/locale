@@ -1,12 +1,10 @@
 = render partial: "layouts/header"
-%div{"ng-app" => "Poster"}
-  
+%div.posts-container{"ng-app" => "Poster"}
   //add posts
-  %div{"ng-controller" => "PostingCtrl"}
+  %div.columns_8.offset_4.posting-controller{"ng-controller" => "PostingCtrl"}
     %strong Submit a new post:
     %form{"ng-submit" => "addPost()"}
       %input{"ng-model" => "newPost.body", :type => "text"}
-        %input{"type" => "submit", "value" => "Add Post"}
     
     //list posts
     <div class = "ng-cloak">

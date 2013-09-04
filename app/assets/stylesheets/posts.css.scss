@@ -10,3 +10,8 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+
+.posts-container {
+	position: absolute;
+	top: 80px;
+}

@@ -1,13 +1,29 @@
-%header.bck.light.main-header
-  %nav.view-links
-    %ul.link-display
-      %li.header-links.foursquare-header-link 
-        %span.icon.ok.header
-      %li.header-links.instagram-header-link 
-        %span.icon.camera-retro.header 
-      %li.header-links.map-header-link
-        %span.icon.map-marker.header      
-      %li.header-links.post-header-link 
-        %span.icon.list-alt.header
-      %li.header-links.twitter-header-link 
-        %span.icon.twitter-sign.header
+.header-div
+  %header.bck.light.main-header
+    %nav.view-links
+      / %nav.signed-in
+      / - if current_user
+      /   Signed in as #{current_user.name}!
+      /   = link_to "Sign out", signout_path
+      / - else
+      /   = link_to "Sign in with Facebook", "/auth/facebook"
+      /   %br
+      /   = link_to "Sign in with Google", "/auth/google_oauth2"
+      / - flash.each do |name, msg|
+      /   = content_tag :div, msg, id: "flash_#{name}"
+      %ul.link-display
+        = link_to "/foursquare" do 
+          %li.header-links.foursquare-header-link 
+            %span.icon.ok.header
+        = link_to "/instagram" do 
+          %li.header-links.instagram-header-link 
+            %span.icon.camera-retro.header 
+        = link_to "/map" do 
+          %li.header-links.map-header-link
+            %span.icon.map-marker.header      
+        = link_to "/posts" do
+          %li.header-links.post-header-link 
+            %span.icon.list-alt.header
+        = link_to "/twitter" do 
+          %li.header-links.twitter-header-link 
+            %span.icon.twitter-sign.header

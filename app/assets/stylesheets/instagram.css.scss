@@ -24,8 +24,17 @@ ul.link-display {
 	list-style: none;
 }
 
+ul.link-display li.header-links {
+	display: inline;
+	padding-left: 40px;
+}
+
+span.icon.header {
+	font-size: 1.5em;
+}
+
 span.icon.map-marker.header {
-	font-size: 8em;
+	font-size: 2.5em;
 }
 
 .local-image {

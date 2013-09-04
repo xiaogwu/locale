@@ -1,16 +1,21 @@
 .header-div
   %header.bck.light.main-header
     %nav.view-links
-      / %nav.signed-in
-      / - if current_user
-      /   Signed in as #{current_user.name}!
-      /   = link_to "Sign out", signout_path
-      / - else
-      /   = link_to "Sign in with Facebook", "/auth/facebook"
-      /   %br
-      /   = link_to "Sign in with Google", "/auth/google_oauth2"
-      / - flash.each do |name, msg|
-      /   = content_tag :div, msg, id: "flash_#{name}"
+      %div.signed-in-status
+        - if current_user
+          %ul.signed-in-menu
+            %li
+              #{current_user.name}
+            %li
+              = link_to "Sign out", signout_path
+        - else
+          %ul.signed-out-menu
+            %li
+              = link_to "Sign in with Facebook", "/auth/facebook"
+            %li  
+              = link_to "Sign in with Google", "/auth/google_oauth2"
+        / - flash.each do |name, msg|
+        /   = content_tag :div, msg, id: "flash_#{name}"
       %ul.link-display
         = link_to "/foursquare" do 
           %li.header-links.foursquare-header-link 

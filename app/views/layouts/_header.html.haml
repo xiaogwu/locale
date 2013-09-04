@@ -1,7 +1,8 @@
 .header-div
   %header.bck.light.main-header
     %nav.view-links
-      %div.signed-in-status
+      %nav.signed-in-status
+        %span.icon.menu.hamburger
         - if current_user
           %ul.signed-in-menu
             %li

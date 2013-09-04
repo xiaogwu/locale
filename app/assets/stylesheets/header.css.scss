@@ -20,7 +20,7 @@ nav.view-links {
 	margin: 0 auto;
 }
 
-div.signed-in-status {
+nav.signed-in-status {
 	position: absolute;
 	max-width: 175px;
 	height: 40px;
@@ -28,8 +28,6 @@ div.signed-in-status {
 	margin-top: 2px;
 	padding: 0 5px 3px 5px;
 	line-height: 20px;
-	border-left: solid grey 1px;
-	border-right: solid grey 1px;
 }
 
 ul.signed-in-menu, ul.signed-out-menu {

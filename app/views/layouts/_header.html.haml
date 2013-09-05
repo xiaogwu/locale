@@ -2,10 +2,10 @@
   %header.bck.light.main-header
     %nav.view-links
       %h3.title LOCALE
-      %nav.signed-in-status
+      %div.signed-in-status
         = link_to "#" do  
           %span.icon.menu.hamburger
-        %div.hamburger-menu
+        %nav.hamburger-menu
           - if current_user
             %ul.signed-in-menu
               %li

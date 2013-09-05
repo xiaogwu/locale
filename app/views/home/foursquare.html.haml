@@ -1,11 +1,12 @@
 = render partial: "layouts/header"
 
 - @trending_venues.venues.each do |venue|
-	= image_tag("#{venue.categories.first.icon}")
-	= venue.name + " |"
-	= venue.location.address + " |"
-	= venue.url
-	= "(#{venue.hereNow.count})"
-	%br
+  %div{:class => ['column_8', 'offset_3']}
+    %div{:class => 'foursquare_checkin'}
+      = image_tag("#{venue.categories.first.icon}")
+      = venue.name + " |"
+      = venue.location.address + " |"
+      = venue.url
+      = "(#{venue.hereNow.count})"
 
 //= pp @trending_venues.to_json

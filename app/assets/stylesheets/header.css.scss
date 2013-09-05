@@ -100,6 +100,13 @@ span.icon.map-marker.header {
 	font-size: 2.5em;
 }
 
+@media screen and (max-width: 768px) {
+	span.icon.menu.hamburger {
+		position: absolute;
+		top: 3px;
+		font-size: 1.75em;
+	}
+}
 
 @media handheld, screen and (max-width: 768px){
 

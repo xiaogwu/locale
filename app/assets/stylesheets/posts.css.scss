@@ -15,3 +15,30 @@
 	position: absolute;
 	top: 80px;
 }
+
+.posts-main {
+	max-width: 612px;
+}
+
+.submit-post-field {
+
+}
+
+h3.conversations {
+	text-transform: uppercase;
+	font-weight: 400;
+	text-align: center;
+}
+
+ul.posts, ul.comments, ul.comment-form {
+	list-style: none;
+}
+
+.posts-main .posts .post-li ul:nth-of-type(odd) {
+	background: grey;
+}
+
+.submit-comment-field {
+	position: relative;
+	margin-left: 10%;
+}

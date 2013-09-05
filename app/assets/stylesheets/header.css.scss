@@ -22,28 +22,58 @@ nav.view-links {
 
 h3.title {
 	position: absolute;
-	left: 10%;
+	left: 11%;
 	font-weight: 400;
 }
 
-nav.signed-in-status {
+div.signed-in-status {
 	position: absolute;
-	max-width: 175px;
+	width: 15%;
 	height: 40px;
-	right: 10%;
+	right: 0%;
 	margin-top: 3px;
 	padding: 0 5px 3px 5px;
-	line-height: 20px;
+	a {
+		position: relative;
+		left: 24%;
+	}
 }
 
 span.icon.menu.hamburger {
-	position: absolute;
-	top: 12px;
 	font-size: 1.75em;
 }
 
-div.hamburger-menu {
+nav.hamburger-menu {
 	display: none;
+	position: absolute;
+	right: 0%;
+	line-height: 20px;
+	width: 100%;
+	margin-top: -7px;
+	padding: 2px;
+	background-color: #27384b;
+	color: white;
+	ul.signed-in-menu, ul.signed-out-menu {
+		left: 2%;
+		line-height: 25px;
+		li {
+			width: 100%;
+			padding: 1% 2% 2% 5%;
+			left: 10%;
+			border-bottom: 1px solid white;
+		}
+		li:last-child {
+			border: none;
+		}
+		  a {
+	  	color: white;
+			font-weight: 400;
+			left: 0;
+		}
+		li span {
+			font-weight: 900;
+		}
+	}
 }
 
 ul.signed-in-menu, ul.signed-out-menu {
@@ -78,13 +108,13 @@ span.icon.map-marker.header {
 	}
 }
 
-@media handheld, screen and (max-width: 775px){
+@media handheld, screen and (max-width: 768px){
 
 	ul.link-display {
 		display: block;
 		list-style: none;
 		position: absolute;
-		left: 33%;
+		left: 29%;
 		max-width: 400px;
 	}
 
@@ -93,11 +123,60 @@ span.icon.map-marker.header {
 		padding-left: 33px;
 	}
 
+	div.signed-in-status {
+		position: absolute;
+		width: 22%;
+		height: 40px;
+		right: 0%;
+		margin-top: 3px;
+		padding: 0 5px 3px 5px;
+		a {
+			position: relative;
+			left: 75%;
+		}
+	}
+
 	span.icon.menu.hamburger {
 		position: absolute;
 		top: 2px;
+		right: 45%;
 		font-size: 1.75em;
 	}
+
+	nav.hamburger-menu {
+		display: none;
+		position: absolute;
+		right: 0%;
+		line-height: 20px;
+		width: 100%;
+		margin-top: 42px;
+		padding: 2px;
+		background-color: #27384b;
+		color: white;
+		ul.signed-in-menu, ul.signed-out-menu {
+			left: 2%;
+			line-height: 25px;
+			li {
+				width: 100%;
+				padding: 1% 2% 2% 5%;
+				left: 10%;
+				border-bottom: 1px solid white;
+			}
+			li:last-child {
+				border: none;
+			}
+			  a {
+		  	color: white;
+				font-weight: 400;
+				left: 0;
+				line-height: 20px;
+			}
+			li span {
+				font-weight: 900;
+			}
+		}
+	}
+
 
 	nav.view-links a {
 		display: inline !important;
@@ -127,13 +206,52 @@ span.icon.map-marker.header {
 		font-size: 1.5em;
 	}
 
-	nav.signed-in-status {
+	div.signed-in-status {
 		position: absolute;
+		width: 29%;
 		height: 40px;
-		right: 4%;
+		right: 0%;
 		margin-top: 3px;
 		padding: 0 5px 3px 5px;
+		font-size: 10px;
+		a {
+			position: relative;
+			left: 85%;
+		}
+	}
+
+	nav.hamburger-menu {
+		display: none;
+		position: absolute;
+		right: 0%;
 		line-height: 20px;
+		width: 100%;
+		margin-top: 42px;
+		padding: 2px;
+		background-color: #27384b;
+		color: white;
+		ul.signed-in-menu, ul.signed-out-menu {
+			left: 2%;
+			line-height: 25px;
+			li {
+				width: 100%;
+				padding: 1% 2% 2% 5%;
+				left: 10%;
+				border-bottom: 1px solid white;
+			}
+			li:last-child {
+				border: none;
+			}
+			  a {
+		  	color: white;
+				font-weight: 400;
+				left: 0;
+				line-height: 20px;
+			}
+			li span {
+				font-weight: 900;
+			}
+		}
 	}
 
 	span.icon.menu.hamburger {

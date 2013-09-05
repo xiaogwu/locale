@@ -33,7 +33,7 @@ div.signed-in-status {
 	right: 0%;
 	margin-top: 3px;
 	padding: 0 5px 3px 5px;
-	a {
+	.hamburger {
 		position: relative;
 		left: 24%;
 	}
@@ -46,13 +46,31 @@ span.icon.menu.hamburger {
 nav.hamburger-menu {
 	display: none;
 	position: absolute;
-	right: 10%;
+	right: 18%;
 	line-height: 20px;
 	width: 100%;
+	margin-top: -7px;
+	padding: 2px;
+	background-color: #27384b;
+	color: white;
 	ul.signed-in-menu, ul.signed-out-menu {
 		left: 2%;
-		li a {
-			left: 0;
+		line-height: 25px;
+		li {
+			width: 100%;
+			padding: 1% 2% 2% 5%;
+			left: 10%;
+			border-bottom: 1px solid white;
+		}
+		li:last-child {
+			border: none;
+		}
+		  a {
+	  	color: white;
+			font-weight: 400;
+		}
+		li span {
+			font-weight: 900;
 		}
 	}
 }
@@ -82,7 +100,7 @@ span.icon.map-marker.header {
 }
 
 
-@media handheld, screen and (max-width: 775px){
+@media handheld, screen and (max-width: 768px){
 
 	ul.link-display {
 		display: block;
@@ -110,13 +128,47 @@ span.icon.map-marker.header {
 		}
 	}
 
-
 	span.icon.menu.hamburger {
 		position: absolute;
 		top: 2px;
 		right: 45%;
 		font-size: 1.75em;
 	}
+
+	nav.hamburger-menu {
+		display: none;
+		position: absolute;
+		right: 18%;
+		line-height: 20px;
+		width: 100%;
+		margin-top: 42px;
+		padding: 2px;
+		background-color: #27384b;
+		color: white;
+		ul.signed-in-menu, ul.signed-out-menu {
+			left: 2%;
+			line-height: 25px;
+			li {
+				width: 100%;
+				padding: 1% 2% 2% 5%;
+				left: 10%;
+				border-bottom: 1px solid white;
+			}
+			li:last-child {
+				border: none;
+			}
+			  a {
+		  	color: white;
+				font-weight: 400;
+				left: 0;
+				line-height: 20px;
+			}
+			li span {
+				font-weight: 900;
+			}
+		}
+	}
+
 
 	nav.view-links a {
 		display: inline !important;
@@ -148,14 +200,49 @@ span.icon.map-marker.header {
 
 	div.signed-in-status {
 		position: absolute;
-		width: 20%;
+		width: 29%;
 		height: 40px;
 		right: 0%;
 		margin-top: 3px;
 		padding: 0 5px 3px 5px;
+		font-size: 10px;
 		a {
 			position: relative;
-			left: 90%;
+			left: 85%;
+		}
+	}
+
+	nav.hamburger-menu {
+		display: none;
+		position: absolute;
+		right: 0%;
+		line-height: 20px;
+		width: 100%;
+		margin-top: 42px;
+		padding: 2px;
+		background-color: #27384b;
+		color: white;
+		ul.signed-in-menu, ul.signed-out-menu {
+			left: 2%;
+			line-height: 25px;
+			li {
+				width: 100%;
+				padding: 1% 2% 2% 5%;
+				left: 10%;
+				border-bottom: 1px solid white;
+			}
+			li:last-child {
+				border: none;
+			}
+			  a {
+		  	color: white;
+				font-weight: 400;
+				left: 0;
+				line-height: 20px;
+			}
+			li span {
+				font-weight: 900;
+			}
 		}
 	}
 

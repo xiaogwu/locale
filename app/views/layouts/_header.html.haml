@@ -1,7 +1,8 @@
 .header-div
   %header.bck.light.main-header
     %nav.view-links
-      %h3.title LOCALE
+      = link_to root_path do 
+        %h3.title LOCALE
       %div.signed-in-status
         = link_to "#" do  
           %span.icon.menu.hamburger
@@ -9,17 +10,19 @@
           - if current_user
             %ul.signed-in-menu
               %li
-                #{current_user.name}
+                %span #{current_user.name}
+              %li
+                = link_to "About Us", "/about"
               %li
                 = link_to "Sign out", signout_path
           - else
             %ul.signed-out-menu
+              %li 
+                = link_to "About Us", "/about"  
               %li
                 = link_to "Sign in with Facebook", "/auth/facebook"
               %li  
                 = link_to "Sign in with Google", "/auth/google_oauth2"
-        / - flash.each do |name, msg|
-        /   = content_tag :div, msg, id: "flash_#{name}"
       %ul.link-display
         = link_to "/foursquare" do 
           %li.header-links.foursquare-header-link 

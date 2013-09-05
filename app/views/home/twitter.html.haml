@@ -2,8 +2,9 @@
 
 - @tweets.each do |tweet|
   %div{:class => ['column_8', 'offset_3']}
-    = link_to(image_tag("#{tweet[:user][:profile_image_url]}"), "http://www.twitter.com/#{tweet[:user][:screen_name]}")
-    %strong= "@#{tweet[:user][:screen_name]}: "
-    = tweet[:text]
+    %div{:class => 'twitter_status'}
+      = link_to(image_tag("#{tweet[:user][:profile_image_url]}"), "http://www.twitter.com/#{tweet[:user][:screen_name]}")
+      %strong= "@#{tweet[:user][:screen_name]}: "
+      = tweet[:text]
 
 

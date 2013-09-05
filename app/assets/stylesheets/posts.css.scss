@@ -25,11 +25,18 @@ h3.conversations {
 	text-transform: uppercase;
 	font-weight: 400;
 	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #dce4ec;
 }
 
+.post-jq-link {
+  span {
+	font-size: 1.35em;
+	text-transform: uppercase;
+	font-weight: 400;
+	}
+}
 .post-submit {
-	border-bottom: 1px solid #dce4ec;
-	padding-bottom: 10px;
 	margin-bottom: 10px;
 }
 

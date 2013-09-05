@@ -35,6 +35,7 @@ nav.signed-in-status {
 	padding: 0 5px 3px 5px;
 	line-height: 20px;
 }
+
 span.icon.menu.hamburger {
 	position: absolute;
 	top: 8px;
@@ -61,10 +62,6 @@ ul.link-display li.header-links {
 	padding-left: 50px;
 }
 
-// ul.link-display li.twitter-header-link {
-// 	padding-right: 50px;
-// }
-
 span.icon.header {
 	font-size: 1.5em;
 }
@@ -74,6 +71,30 @@ span.icon.map-marker.header {
 }
 
 
+@media handheld, screen and (max-width: 760px){
+
+	ul.link-display {
+		display: block;
+		list-style: none;
+		position: absolute;
+		left: 33%;
+		max-width: 400px;
+	}
+
+	ul.link-display li.header-links {
+		display: inline !important;
+		padding-left: 33px;
+	}
+
+	span.icon.header {
+		font-size: 1em !important;
+	}
+
+	span.icon.map-marker.header {
+		font-size: 1.7em !important;
+	}
+
+}
 @media handheld, screen and (max-width: 620px){
 	header.main-header {
 		display: block;
@@ -117,19 +138,11 @@ span.icon.map-marker.header {
 	}
 
 	ul.link-display {
+		display: none;
 		list-style: none;
 		position: absolute;
 		left: 33%;
 		max-width: 400px;
-	}
-
-	ul.link-display li.header-links {
-		display: inline;
-		padding-left: 10px;
-	}
-
-	ul.link-display li.twitter-header-link {
-		padding-right: 10px;
 	}
 
 	span.icon.header {
@@ -141,14 +154,3 @@ span.icon.map-marker.header {
 	}
 }
 
-.local-image {
-	position: relative;
-	max-width: 612px;
-	left: 3%;
-}
-
-.local-image img {
-	max-width: 100%;
-	height: auto;
-	margin: 15px 0 0 0;
-}

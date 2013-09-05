@@ -4,8 +4,11 @@
   %div.column_8.offset_3{"ng-controller" => "PostingCtrl"}
     .posts-main
       %h3.conversations Conversations in your area
+      .post-link
+        = link_to "#" do  
+          %span.icon.pencil.header 
+          %span POST
       .post-submit
-        %strong Submit a new post:
         %form.submit-post-field{"ng-submit" => "addPost()"}
           %input{"ng-model" => "newPost.body", :type => "text", "placeholder" => "Submit a post..."}
       //list posts
@@ -16,3 +19,12 @@
             %li {{comment.text}}
           %form.submit-comment-field{"ng-submit" => "addComment(post.id, newComment)"}>
             %input{"ng-model" => "newComment.text", :type => "text", "placeholder" => "Add a comment..."}>
+
+
+/ :javascript
+/   $(document).ready(function() {
+/     $('.post-link').click(function(event){
+/       event.preventDefault();
+/       $('.submit-post-field').css('display','block');
+/     })
+/   });

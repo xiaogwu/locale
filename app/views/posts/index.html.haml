@@ -4,15 +4,16 @@
   %div.column_8.offset_3{"ng-controller" => "PostingCtrl"}
     .posts-main
       %h3.conversations Conversations in your area
-      %strong Submit a new post:
-      %form.submit-post-field{"ng-submit" => "addPost()"}
-        %input{"ng-model" => "newPost.body", :type => "text"}
+      .post-submit
+        %strong Submit a new post:
+        %form.submit-post-field{"ng-submit" => "addPost()"}
+          %input{"ng-model" => "newPost.body", :type => "text", "placeholder" => "Submit a post..."}
       //list posts
       %ul.posts{"ng-repeat" => "post in posts", :class => "post-{{post.id}}"}
         %li{:class => "post-li", :id => "post-{{post.id}}"} 
-          %h5 {{post.body}}     
+          %h5.comment {{post.body}}     
           %ul.comments{"ng-repeat" => "comment in post.comments"}
-            %li  {{comment.text}}
+            %li {{comment.text}}
           %form.submit-comment-field{"ng-submit" => "addComment(post.id, newComment)"}>
-            %input{"ng-model" => "newComment.text", :type => "text"}>
+            %input{"ng-model" => "newComment.text", :type => "text", "placeholder" => "Add a comment..."}>
 

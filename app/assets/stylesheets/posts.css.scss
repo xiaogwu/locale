@@ -20,25 +20,45 @@
 	max-width: 612px;
 }
 
-.submit-post-field {
-
-}
-
 h3.conversations {
+	margin-bottom: 10px;
 	text-transform: uppercase;
 	font-weight: 400;
 	text-align: center;
+}
+
+.post-submit {
+	border-bottom: 1px solid #dce4ec;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.submit-post-field {
+	display: none;
+}
+
+h5.comment {
+	margin-bottom: 5px;
 }
 
 ul.posts, ul.comments, ul.comment-form {
 	list-style: none;
 }
 
-.posts-main .posts .post-li ul:nth-of-type(odd) {
-	background: grey;
+.posts-main .posts .post-li ul.comments {
+	border-bottom: solid white 1px;
+	background-color: #f5fafa;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 5%;
 }
 
 .submit-comment-field {
 	position: relative;
-	margin-left: 10%;
+	margin-left: 5%;
+	margin-top: 0px;
+	input[type="text"] {
+		border: 1px solid #dce4ec;
+	}
 }
+

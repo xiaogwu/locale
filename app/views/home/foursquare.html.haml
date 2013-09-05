@@ -1,11 +1,11 @@
 = render partial: "layouts/header"
 
 - @trending_venues.venues.each do |venue|
-	= image_tag("#{venue.categories.first.icon}") 
+	= image_tag("#{venue.categories.first.icon}")
 	= venue.name + " |"
 	= venue.location.address + " |"
-	= venue.url 
-	= venue.hereNow.count 
+	= venue.url
+	= "(#{venue.hereNow.count})"
 	%br
 
-= pp @trending_venues.to_json
+//= pp @trending_venues.to_json

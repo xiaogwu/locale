@@ -48,10 +48,23 @@ section.landing button {
   border-radius: 0px 5px 5px 0px !important;
 }
 
+h6.sign-in-text {
+  font-size: 1.4em !important;
+}
+
 @media handheld, screen and (max-width: 620px){
 
   .reduce-margin {
-    margin-top: -50px;
+    margin-top: -70px;
+    h1.front-page {
+      font-size: 6em !important;
+    }
+    h2.front-page-subtitle {
+      font-size: 3em !important; 
+    }
+
   }
+
+
 
 }

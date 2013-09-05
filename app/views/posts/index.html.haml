@@ -1,26 +1,18 @@
 = render partial: "layouts/header"
-%div{"ng-app" => "Poster"}
-
+%div.posts-container{"ng-app" => "Poster"}
   //add posts
-  %div{"ng-controller" => "PostingCtrl"}
-    %strong Submit a new post:
-    %form{"ng-submit" => "addPost()"}
-      %input{"ng-model" => "newPost.body", :type => "text"}
-        %input{"type" => "submit", "value" => "Add Post"}
-
-    //list posts
-    <div class = "ng-cloak">
-    %ul{"ng-repeat" => "post in posts"}
-      %li{:class => "post", :id => "post-{{post.id}}"}
-        {{post.body}}
-        %ul{"ng-repeat" => "comment in post.comments"}
-          %li  {{comment.text}}
-        %ul
-          %li
-            %form{"ng-submit" => "addComment(post.id, newComment)"}>
-              %input{"ng-model" => "newComment.text", :type => "text"}>
-                %input{"type" => "submit", "value" => "Add Comment"}>
-    </div>
-
-%br
-%br
+  %div.column_8.offset_3{"ng-controller" => "PostingCtrl"}
+    .posts-main
+      %h3.conversations Conversations in your area
+      .post-submit
+        %strong Submit a new post:
+        %form.submit-post-field{"ng-submit" => "addPost()"}
+          %input{"ng-model" => "newPost.body", :type => "text", "placeholder" => "Submit a post..."}
+      //list posts
+      %ul.posts{"ng-repeat" => "post in posts", :class => "post-{{post.id}}"}
+        %li{:class => "post-li", :id => "post-{{post.id}}"} 
+          %h5.comment {{post.body}}     
+          %ul.comments{"ng-repeat" => "comment in post.comments"}
+            %li {{comment.text}}
+          %form.submit-comment-field{"ng-submit" => "addComment(post.id, newComment)"}>
+            %input{"ng-model" => "newComment.text", :type => "text", "placeholder" => "Add a comment..."}>

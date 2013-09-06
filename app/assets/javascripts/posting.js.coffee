@@ -8,7 +8,7 @@ WDI.app = angular.module("Poster", ["ngResource", 'WDI.factories'])
   $scope.addPost = ->
     post = Post.save($scope.newPost)
     console.log post
-    $scope.posts.push(post)
+    # $scope.posts.push(post)
     $scope.newPost = {}
 
   $scope.addComment = (post_id, text) ->

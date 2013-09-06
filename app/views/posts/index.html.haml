@@ -19,12 +19,3 @@
             %li {{comment.text}}
           %form.submit-comment-field{"ng-submit" => "addComment(post.id, newComment)"}>
             %input{"ng-model" => "newComment.text", :type => "text", "placeholder" => "Add a comment..."}>
-
-
-/ :javascript
-/   $(document).ready(function() {
-/     $('.post-link').click(function(event){
-/       event.preventDefault();
-/       $('.submit-post-field').css('display','block');
-/     })
-/   });

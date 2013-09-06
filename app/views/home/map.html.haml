@@ -1,4 +1,4 @@
-= render partial: "layouts/header"
+= render partial: "layouts/mapheader"
 .overlay
   #map
   / %nav
@@ -122,8 +122,10 @@
     mymarker
           .setLatLng(e.latlng)
           .addTo(map);
+
     setGeoCookie(e.latlng);
   }
+
 
   TukTuk.Modal.loading();
   setTimeout( TukTuk.Modal.hide, 1000);

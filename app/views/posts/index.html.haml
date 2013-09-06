@@ -3,7 +3,7 @@
   //add posts
   %div.column_8.offset_3{"ng-controller" => "PostingCtrl"}
     .posts-main
-      %h3.conversations Conversations in your area
+      %h3.instagram Conversations in your area
       .post-link
         = link_to "#" do
           %span.icon.pencil.header
@@ -20,7 +20,7 @@
           %form.submit-comment-field{"ng-submit" => "addComment(post.id, newComment)"}>
             %input{"ng-model" => "newComment.text", :type => "text", "placeholder" => "Add a comment..."}>
       %span{"ng-show"=> "noPosts()", :class => "no-posts"}There are no posts in your area. Start the conversation!
-    
+
 
 :javascript
   $(document).ready(function() {

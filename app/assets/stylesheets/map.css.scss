@@ -27,6 +27,20 @@ html, body {
 
 #modal {
   top: 28%;
+  header {
+    margin-bottom: 10px;
+  }
+  h5.text.book.inline{
+    text-transform: uppercase;
+  }
+  span.intro {
+    margin-left: 10px;
+  }
+  article {
+    margin-bottom: 5px;
+    padding-top: 5px;
+    line-height: 28px;
+  }
 }
 
 .leaflet-top.leaflet-left {

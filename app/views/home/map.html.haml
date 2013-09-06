@@ -16,17 +16,21 @@
 
   #modal.column_5{"data-tuktuk" => "modal"}
     %header
-      %h4.text.book.inline Welcome to Locale
+      %h5.text.book.inline Welcome to Locale!
       %button.transparent.small.on-right.inline.icon.remove{"data-modal" => "close"}
+    %span.text.bold.intro It's easy to get started: 
     %article
-      Seeing how this is your first time using Locale, let me introduce the application.<br><br>
-      On the map page, click anywhere on the map to set a marker.<br><br>
-      Select the marker again and select an icon of the local activity.<br><br>
-      You can also navigate between the activities with the topbar navigation.<br><br>
-      Feel free to move the marker around.  Discover what is going on locally or abroad.<br><br>
-      You can sign out with menu on the right.<br><br>
+      Click on the map to set a marker.<br>
+      Click the marker to see goings-on around you.<br>
+      Move the map marker wherever you like. <br> 
+      Discover what is going on, locally or abroad!<br>
 
 :javascript
+
+  $('.leaflet-clickable').click(function(){
+    console.log("hi");
+  });
+
   L.Icon.Default.imagePath = "/assets/vendor/images"
 
   var base_layer = new L.tileLayer(
@@ -105,17 +109,15 @@
       }
       else {
         //alert("GeoCords not set, please set a marker on the map.");
-        $('#map').css('opacity', '0.1');
+        $('#map').css('opacity', '0.2');
         $('#modal').addClass("active");
         return false;
       }
   }
 
-
   // Click on map show
   var mymarker = L.marker();
-
-
+  
   function onMapClick(e) {
     mymarker
           .setLatLng(e.latlng)
@@ -134,3 +136,6 @@
     $('#modal').removeClass("active");
     $('#map').css('opacity', '1');
   });
+
+
+

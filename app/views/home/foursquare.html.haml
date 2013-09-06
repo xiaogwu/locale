@@ -1,14 +1,21 @@
 = render partial: "layouts/header"
 .main
-  %h3.instagram Trending in your area
+  %h3.foursquare Trending in your area
   - @trending_venues.venues.each do |venue|
     %div{:class => ['column_8', 'offset_3']}
       %div{:class => 'foursquare-checkin'}
         .foursquare-image
           = image_tag("#{venue.categories.first.icon}")
-        %
-        span.text.bold #{venue.name} |
-        - if venue.location.address
-          span.text.bold #{venue.location.address} |
-        span.text.bold #{venue.url}
-        = "#{venue.hereNow.count}"
+        .foursquare-info
+          = link_to "#{venue.canonicalUrl}" do 
+            %span.text.bold #{venue.name} 
+          - if venue.location.address
+            %span.text.bold | #{venue.location.address} <br>
+          - if venue.url
+            = link_to "#{venue.url}" do 
+              %span.text.url-link #{venue.url} <br>
+          .checkin-count
+            %span.text Current check-ins: #{venue.hereNow[:count]} 
+            %span.text | Total check-ins ever: #{venue.stats[:checkinsCount]} <br>
+            %span.text Distance from you: #{venue.location.distance} meters
+

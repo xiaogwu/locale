@@ -29,6 +29,8 @@ WDI.app.directive "ngFocus", ["$parse", ($parse) ->
         c_value = unescape(c_value.substring(c_start, c_end))
       c_value
 
+    $scope.newPost.lat = $scope.lat
+    $scope.newPost.lng = $scope.lng
 
     post = Post.save($scope.newPost)
     console.log post
@@ -45,6 +47,9 @@ WDI.app.directive "ngFocus", ["$parse", ($parse) ->
 
   $scope.getGPS = () ->
     savePosition = (position) ->
+      $scope.lat = position.coords.latitude
+      $scope.lng = position.coords.longitude
+
       console.log position.coords.latitude
       console.log position.coords.longitude
       cookie_val = position.coords.latitude + "|" + position.coords.longitude

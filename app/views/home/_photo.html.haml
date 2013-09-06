@@ -3,12 +3,13 @@
     = image_tag("#{photo.images.standard_resolution.url}")
     = link_to("http://www.instagram.com/#{photo.user.username}", :class => "pic-user-caption") do 
       = image_tag("#{photo.user.profile_picture}", :class => "instagram-profile-pic")
-      %span.text.bold.instagram-user-name @#{photo.user.username}:  
+      %span.text.bold.instagram-user-name @#{photo.user.username}  
     - if photo.caption 
-      %span.text.caption #{photo.caption.text}
+      %span.text.caption : #{photo.caption.text}
     .photo-comments
       - if photo.comments.data.length > 0
         - photo.comments.data.each do |comment|
           %span.text.bold @#{comment.from.username}:
           %span.text #{comment.text}
           %br
+.no-more No more

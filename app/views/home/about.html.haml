@@ -1,0 +1,47 @@
+= render partial: "layouts/header"
+%section.padding.bck.color
+  .row
+    .column_3.padding
+      %img.responsive.rounded{"data-tip" => "Hello world!", :src => "http://cdn.tapquo.com/photos/javi_color.jpg"}/
+    .column_9.color.white
+      %h1.text.bold.color.theme.margin-top @soyjavi
+      %h3.text.normal.italic.margin-bottom Javi Jiménez Villar
+      %h4.text.justify.margin-bottom Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos iste adipisci deserunt officia alias quod unde nisi animi maiores ex amet commodi rerum veritatis reiciendis autem ad optio quisquam praesentium.
+      .row.text.bold.hide-phone
+        .column_3
+          %a.color.theme{:href => "#"}
+            %span.icon.home
+            http://tapquo.com
+        .column_3
+          %span.icon.pushpin
+          Bilbao, SP
+        .column_3.text.big.right
+          %a.margin-right.icon.twitter{:href => "#"}
+          %a.margin-right.icon.facebook{:href => "#"}
+          %a.icon.linkedin{:href => "#"}
+
+%section.theme.padding.bck.color
+  .row
+    .column_3.padding
+      %img.responsive.rounded{"data-tip" => "Xiao G. Wu", :src => "https://en.gravatar.com/userimage/414435/ab93ba383bab4eb79ac1bd30b0f5f05b.jpg?size=200"}/
+    .column_9.color.white
+      %h1.text.bold.color.margin-top Xiao G. Wu
+      %h3.text.normal.italic.margin-bottom Web Development Engineer
+      %h4.text.justify.margin-bottom Web Developer Engineer in training.  Currently attending General Assembly Web Development Immersion program in SF, CA.
+      .row.text.bold.hide-phone
+        .column_3
+          %a.color{:href => "http://xiaogwu.github.io"}
+            %span.icon.home
+            http://xiaogwu.github.io
+        .column_3
+          %span.icon.pushpin
+          San Francisco, CA
+        .column_3.text.big.right
+          %a.margin-right.icon.twitter{:href => "http://www.twitter.com/xiaogwu"}
+          %a.margin-right.icon.github{:href => "https://github.com/xiaogwu"}
+          %a.icon.linkedin{:href => "http://www.linkedin.com/in/xiaogwu"}
+
+%footer.bck.white.padding
+  .row.margin-top.margin-bottom
+    .column_4.offset_4.text.center
+      &copy; 2013 Locale

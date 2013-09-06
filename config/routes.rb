@@ -8,11 +8,12 @@ Locale::Application.routes.draw do
   get '/twitter', to: 'home#twitter'
   get '/instagram', to: 'home#instagram'
   get '/foursquare', to: 'home#foursquare'
+  get '/about', to: 'home#about'
 
   #Posts Controller
-  resources :posts do 
+  resources :posts do
     resources :comments
-  end 
+  end
 
   #Omniauth callback
   get 'auth/:provider/callback', to: 'sessions#create'

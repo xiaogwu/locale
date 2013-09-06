@@ -27,4 +27,7 @@ class HomeController < ApplicationController
     @trending_venues = client.trending_venues("#{lat_lng[0]},#{lat_lng[1]}", :limit => 50, :radius => 2500)
   end
 
+  def about
+  end
+
 end

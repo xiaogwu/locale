@@ -100,21 +100,18 @@ span.icon.map-marker.header {
 	font-size: 2.5em;
 }
 
-@media screen and (max-width: 768px) {
-	span.icon.menu.hamburger {
-		position: absolute;
-		top: 3px;
-		font-size: 1.75em;
-	}
-}
-
 @media handheld, screen and (max-width: 768px){
+
+	h3.title {
+		top: 5px;
+		left: 8%;
+	}
 
 	ul.link-display {
 		display: block;
 		list-style: none;
 		position: absolute;
-		left: 29%;
+		left: 32%;
 		max-width: 400px;
 	}
 
@@ -132,17 +129,16 @@ span.icon.map-marker.header {
 		padding: 0 5px 3px 5px;
 		a {
 			position: relative;
-			left: 75%;
+			left: 47%;
 		}
 	}
 
 	span.icon.menu.hamburger {
 		position: absolute;
-		top: 2px;
-		right: 45%;
+		top: 3px;
 		font-size: 1.75em;
 	}
-
+	
 	nav.hamburger-menu {
 		display: none;
 		position: absolute;
@@ -177,7 +173,6 @@ span.icon.map-marker.header {
 		}
 	}
 
-
 	nav.view-links a {
 		display: inline !important;
 	}
@@ -203,12 +198,12 @@ span.icon.map-marker.header {
 		position: absolute;
 		left: 2%;
 		font-weight: 400;
-		font-size: 1.5em;
+		font-size: 1.4em !important;
 	}
 
 	div.signed-in-status {
 		position: absolute;
-		width: 29%;
+		width: 35%;
 		height: 40px;
 		right: 0%;
 		margin-top: 3px;
@@ -216,7 +211,7 @@ span.icon.map-marker.header {
 		font-size: 10px;
 		a {
 			position: relative;
-			left: 85%;
+			left: 86%;
 		}
 	}
 
@@ -264,7 +259,7 @@ span.icon.map-marker.header {
 	ul.link-display {
 		list-style: none;
 		position: absolute;
-		left: 30%;
+		left: 25%;
 		max-width: 400px;
 	}
 

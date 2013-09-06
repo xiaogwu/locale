@@ -1,17 +1,92 @@
+h3.instagram {
+margin-bottom: 10px;
+text-transform: uppercase;
+font-weight: 400;
+text-align: center;
+padding-bottom: 10px;
+right: 1%;
+margin-top: 3%;
+position: relative;
+}
+
 .local-image {
 	position: relative;
 	max-width: 612px;
-	left: 3%;
+	left: 0%;
+	margin-top: -1%;
+	margin-bottom: 3%;
+	img {
+		max-width: 100%;
+		height: auto;
+		margin: 15px 0 0 0;
+	}
+	a {
+		display: inline;
+	}
 }
 
-.local-image img {
-	max-width: 100%;
-	height: auto;
-	margin: 15px 0 0 0;
+.local-image .instagram-profile-pic {
+	margin-top: 0px;
+	width: 5%;
+	border-radius: 50%;
+}
+
+span.instagram-user-name, span.caption {
+	font-size: 1.2em;
+	overflow: hidden;
 }
 
 //may want to change this eventually
-.photo-caption {
+.photo-comments {
 	overflow: hidden;
+}
 
+
+@media handheld, screen and (max-width: 768px){
+
+	h3.instagram {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	font-weight: 400;
+	text-align: center;
+	padding-bottom: 10px;
+	right: 0%;
+	margin-top: 4%;
+	position: relative;
+	}
+
+	.local-image {
+		position: relative;
+		left: 33%;
+		margin-top: -2%;
+		margin-bottom: 3%;
+		img {
+			max-width: 100%;
+			height: auto;
+			margin: 15px 0 0 0;
+		}
+		a {
+			display: inline;
+		}
+	}
+}
+
+@media handheld, screen and (max-width: 620px){
+
+	h3.instagram {
+	margin-bottom: -5px;
+	text-transform: uppercase;
+	font-weight: 400;
+	text-align: center;
+	padding-bottom: 10px;
+	right: 0%;
+	margin-top: 6%;
+	position: relative;
+	font-size: 17px !important;
+	}
+	.local-image .instagram-profile-pic {
+		margin-top: 0px;
+		width: 8%;
+		border-radius: 50%;
+	}
 }

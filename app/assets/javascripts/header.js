@@ -6,7 +6,6 @@ $(document).ready(function() {
   })
 
   $('.hamburger-menu').click(function(event){
-    event.preventDefault();
     $('.hamburger-menu').css('display','none');
   })
 

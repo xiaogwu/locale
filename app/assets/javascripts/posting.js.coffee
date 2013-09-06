@@ -29,6 +29,7 @@ WDI.app.directive "ngFocus", ["$parse", ($parse) ->
         c_value = unescape(c_value.substring(c_start, c_end))
       c_value
 
+
     post = Post.save($scope.newPost)
     console.log post
     console.log getCookie("lat_lng_post").split "|"

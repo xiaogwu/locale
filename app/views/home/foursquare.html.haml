@@ -6,9 +6,10 @@
       %div{:class => 'foursquare-checkin'}
         .foursquare-image
           = image_tag("#{venue.categories.first.icon}")
-        %
-        span.text.bold #{venue.name} |
-        - if venue.location.address
-          span.text.bold #{venue.location.address} |
-        span.text.bold #{venue.url}
-        = "#{venue.hereNow.count}"
+        .foursquare-info
+          %span.text.bold #{venue.name} |
+          - if venue.location.address
+            %span.text.bold #{venue.location.address} |
+          %span.text.bold #{venue.url}
+          %br
+          = "#{venue.hereNow.count}"

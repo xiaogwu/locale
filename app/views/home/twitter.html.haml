@@ -1,10 +1,11 @@
 = render partial: "layouts/header"
-
-- @tweets.each do |tweet|
-  %div{:class => ['column_8', 'offset_3']}
-    %div{:class => 'twitter_status'}
-      = link_to(image_tag("#{tweet[:user][:profile_image_url]}"), "http://www.twitter.com/#{tweet[:user][:screen_name]}")
-      %strong= "#{tweet[:user][:name]} @#{tweet[:user][:screen_name]}: "
-      = tweet[:text]
+.main
+  %h3.instagram Tweets in your area
+  - @tweets.each do |tweet|
+    %div{:class => ['column_8', 'offset_3']}
+      %div{:class => 'twitter_status'}
+        = link_to(image_tag("#{tweet[:user][:profile_image_url]}"), "http://www.twitter.com/#{tweet[:user][:screen_name]}")
+        %strong= "#{tweet[:user][:name]} @#{tweet[:user][:screen_name]}: "
+        = tweet[:text]
 
 

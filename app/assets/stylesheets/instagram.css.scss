@@ -57,6 +57,7 @@ span.instagram-user-name, span.caption {
 
 	.local-image {
 		position: relative;
+		max-width: 612px;
 		left: 33%;
 		margin-top: -2%;
 		margin-bottom: 3%;
@@ -73,6 +74,23 @@ span.instagram-user-name, span.caption {
 
 @media handheld, screen and (max-width: 620px){
 
+
+	.local-image {
+		position: relative;
+		max-width: 612px;
+		left: 4%;
+		margin-top: -2%;
+		margin-bottom: 3%;
+		img {
+			max-width: 100%;
+			height: auto;
+			margin: 15px 0 0 0;
+		}
+		a {
+			display: inline;
+		}
+	}
+
 	h3.instagram {
 	margin-bottom: -5px;
 	text-transform: uppercase;
@@ -84,6 +102,7 @@ span.instagram-user-name, span.caption {
 	position: relative;
 	font-size: 17px !important;
 	}
+	
 	.local-image .instagram-profile-pic {
 		margin-top: 0px;
 		width: 8%;

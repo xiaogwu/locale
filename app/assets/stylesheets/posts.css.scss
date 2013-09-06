@@ -69,3 +69,17 @@ ul.posts, ul.comments, ul.comment-form {
 	}
 }
 
+@media handheld, screen and (max-width: 620px){
+
+	.posts-container {
+		position: absolute;
+		top: 50px;
+		left: 10px;
+	}
+
+	.no-posts {
+		position: absolute;
+		width: 400px;
+	}
+
+}

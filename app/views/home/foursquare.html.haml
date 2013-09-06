@@ -7,8 +7,8 @@
         .foursquare-image
           = image_tag("#{venue.categories.first.icon}")
         %
-        = venue.name + " |"
+        span.text.bold #{venue.name} |
         - if venue.location.address
-          = venue.location.address + " |"
-        = venue.url
+          span.text.bold #{venue.location.address} |
+        span.text.bold #{venue.url}
         = "#{venue.hereNow.count}"

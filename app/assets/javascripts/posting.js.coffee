@@ -15,33 +15,15 @@ WDI.app.directive "ngFocus", ["$parse", ($parse) ->
   $scope.posts = Post.query()
 
   $scope.addPost = ->
-
-    getCookie = (c_name) ->
-      c_value = document.cookie
-      c_start = c_value.indexOf(" " + c_name + "=")
-      c_start = c_value.indexOf(c_name + "=")  if c_start is -1
-      if c_start is -1
-        c_value = null
-      else
-        c_start = c_value.indexOf("=", c_start) + 1
-        c_end = c_value.indexOf(";", c_start)
-        c_end = c_value.length  if c_end is -1
-        c_value = unescape(c_value.substring(c_start, c_end))
-      c_value
-
     $scope.newPost.lat = $scope.lat
     $scope.newPost.lng = $scope.lng
-
     post = Post.save($scope.newPost)
-    console.log post
-    console.log getCookie("lat_lng_post").split "|"
     $scope.posts.push(post)
     $scope.newPost = {}
 
   $scope.addComment = (post_id, text) ->
     console.log post_id
     $http.post("/posts/" + post_id + "/comments", text).success ->
-      console.log "success!"
       $scope.posts = Post.query()
       # $http.get("/posts").success ->
 
@@ -59,6 +41,9 @@ WDI.app.directive "ngFocus", ["$parse", ($parse) ->
       navigator.geolocation.getCurrentPosition savePosition
     else
       alert "Geolocation is not supported by this browser."
+
+  $scope.noPosts = () ->
+    $scope.posts.length == 0   
 ]
 
 @CommentingCtrl = ["$scope", "Comment", "$http", ($scope, Comment, $http) ->

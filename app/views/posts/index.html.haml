@@ -19,6 +19,7 @@
             %li {{comment.text}}
           %form.submit-comment-field{"ng-submit" => "addComment(post.id, newComment)"}>
             %input{"ng-model" => "newComment.text", :type => "text", "placeholder" => "Add a comment..."}>
+      %span{"ng-show"=> "noPosts()" } There are no posts in your area. Start the conversation!
 
 :javascript
   $(document).ready(function() {

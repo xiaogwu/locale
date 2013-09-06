@@ -7,9 +7,13 @@
         .foursquare-image
           = image_tag("#{venue.categories.first.icon}")
         .foursquare-info
-          %span.text.bold #{venue.name} |
+          %span.text.bold #{venue.name} 
+          |
           - if venue.location.address
-            %span.text.bold #{venue.location.address} |
-          %span.text.bold #{venue.url}
+            %span.text.bold #{venue.location.address} 
+            |
+          = link_to "#{venue.url}" do 
+            %span.text.bold #{venue.url}
           %br
-          = "#{venue.hereNow.count}"
+          .checkin-count
+            = "#{venue.hereNow.count}"

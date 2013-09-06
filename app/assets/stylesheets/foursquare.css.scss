@@ -1,6 +1,6 @@
 .foursquare-checkin {
   position: relative;
-  max-width: 612px;
+  max-width: 800px;
   left: 10%;
 }
 
@@ -10,4 +10,12 @@
 
 .foursquare-info {
   display: inline;
+  position: relative;
+  left: 8px;
+  bottom: 15px;
+}
+
+.checkin-count {
+  position: relative;
+  left: 35px;
 }

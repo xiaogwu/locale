@@ -26,6 +26,11 @@
       Discover what is going on, locally or abroad!<br>
 
 :javascript
+
+  $('.leaflet-clickable').click(function(){
+    console.log("hi");
+  });
+
   L.Icon.Default.imagePath = "/assets/vendor/images"
 
   var base_layer = new L.tileLayer(
@@ -110,11 +115,7 @@
       }
   }
 
-
   // Click on map show
-  var mymarker = L.marker();
-
-
   function onMapClick(e) {
     mymarker
           .setLatLng(e.latlng)
@@ -133,3 +134,6 @@
     $('#modal').removeClass("active");
     $('#map').css('opacity', '1');
   });
+
+
+

@@ -198,12 +198,12 @@ span.icon.map-marker.header {
 		position: absolute;
 		left: 2%;
 		font-weight: 400;
-		font-size: 1.5em;
+		font-size: 1.4em !important;
 	}
 
 	div.signed-in-status {
 		position: absolute;
-		width: 29%;
+		width: 35%;
 		height: 40px;
 		right: 0%;
 		margin-top: 3px;
@@ -259,7 +259,7 @@ span.icon.map-marker.header {
 	ul.link-display {
 		list-style: none;
 		position: absolute;
-		left: 30%;
+		left: 25%;
 		max-width: 400px;
 	}
 

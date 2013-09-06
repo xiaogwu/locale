@@ -1,15 +1,30 @@
 = render partial: "layouts/header"
-#map
-/ %nav
-/ - if current_user
-/   Signed in as #{current_user.name}!
-/   = link_to "Sign out", signout_path
-/ - else
-/   = link_to "Sign in with Facebook", "/auth/facebook"
-/   %br
-/   = link_to "Sign in with Google", "/auth/google_oauth2"
-/ - flash.each do |name, msg|
-/   = content_tag :div, msg, id: "flash_#{name}"
+.overlay
+  #map
+  / %nav
+  / - if current_user
+  /   Signed in as #{current_user.name}!
+  /   = link_to "Sign out", signout_path
+  / - else
+  /   = link_to "Sign in with Facebook", "/auth/facebook"
+  /   %br
+  /   = link_to "Sign in with Google", "/auth/google_oauth2"
+  / - flash.each do |name, msg|
+  /   = content_tag :div, msg, id: "flash_#{name}"
+
+
+
+  #modal.column_5{"data-tuktuk" => "modal"}
+    %header
+      %h4.text.book.inline Welcome to Locale
+      %button.transparent.small.on-right.inline.icon.remove{"data-modal" => "close"}
+    %article
+      Seeing how this is your first time using Locale, let me introduce the application.<br><br>
+      On the map page, click anywhere on the map to set a marker.<br><br>
+      Select the marker again and select an icon of the local activity.<br><br>
+      You can also navigate between the activities with the topbar navigation.<br><br>
+      Feel free to move the marker around.  Discover what is going on locally or abroad.<br><br>
+      You can sign out with menu on the right.<br><br>
 
 :javascript
   L.Icon.Default.imagePath = "/assets/vendor/images"
@@ -90,9 +105,12 @@
       }
       else {
         //alert("GeoCords not set, please set a marker on the map.");
+        $('#map').css('opacity', '0.1');
+        $('#modal').addClass("active");
         return false;
       }
   }
+
 
   // Click on map show
   var mymarker = L.marker();
@@ -105,6 +123,14 @@
     setGeoCookie(e.latlng);
   }
 
+  TukTuk.Modal.loading();
+  setTimeout( TukTuk.Modal.hide, 1000);
+
   map.on('click', onMapClick);
 
   window.onload=restoreMarker;
+
+  $('button.transparent.small.on-right.inline.icon.remove').on("click", function(e) {
+    $('#modal').removeClass("active");
+    $('#map').css('opacity', '1');
+  });

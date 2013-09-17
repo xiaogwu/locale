@@ -21,8 +21,8 @@
     %span.text.bold.intro It's easy to get started: 
     %article
       Click on the map to set a marker.<br>
-      Click the marker to see goings-on around you.<br>
-      Move the map marker wherever you like. <br> 
+      Click the marker to link to activities around you.<br>
+      Move the map marker to anywhere you want.<br> 
       Discover what is going on, locally or abroad!<br>
 
 :javascript
@@ -62,7 +62,7 @@
       //alert(lat_lng[0]);
       //alert(lat_lng[1]);
       mymarker = L.marker([lat_lng[0], lat_lng[1]]).addTo(map);
-      mymarker.bindPopup('<div id="map_bubble" style="font-size:32px;"><a href="/foursquare"><span class="icon ok" style="padding:10px"></span></a><a href="/instagram"><span class="icon camera-retro" style="padding:10px"></span></a><a href="/posts"><span class="icon list-alt" style="padding:10px"></span></a><a href="/twitter"><span class="icon twitter-sign" style="padding:10px"></span></a></div>', {'minWidth': '202'});
+      mymarker.bindPopup('<div id="map_bubble" style="font-size:32px;"><a href="/foursquare"><i class="icon-foursquare" style="padding:10px"></i></a><a href="/instagram"><span class="icon camera-retro" style="padding:10px"></span></a><a href="/posts"><span class="icon list-alt" style="padding:10px"></span></a><a href="/twitter"><span class="icon twitter-sign" style="padding:10px"></span></a></div>', {'minWidth': '202'});
     }
     else {
       mymarker = L.marker();

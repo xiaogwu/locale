@@ -96,8 +96,12 @@ span.icon.header {
 	font-size: 1.5em;
 }
 
-.icon-foursquare {
+ul.link-display li.header-links .icon-foursquare {
 	font-size: 1.5em;
+}
+
+#map_bubble .icon-foursquare {
+	font-size: 1em;
 }
 
 span.icon.map-marker.header {
@@ -142,7 +146,7 @@ span.icon.map-marker.header {
 		top: 3px;
 		font-size: 1.75em;
 	}
-	
+
 	nav.hamburger-menu {
 		display: none;
 		position: absolute;
@@ -185,9 +189,13 @@ span.icon.map-marker.header {
 		font-size: 1.25em !important;
 	}
 
-	.icon-foursquare {
+	/*.icon-foursquare {
 		font-size: 1.25em;
-	}
+	}*/
+
+	ul.link-display li.header-links .icon-foursquare {
+	font-size: 1.25em;
+}
 
 	li.header-links span.icon.map-marker.header {
 		font-size: 1.7em !important;

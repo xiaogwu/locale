@@ -8,7 +8,7 @@ Hyperlocal app that uses geo-location to discover local events, activites, messa
 MVP
 ===
 * GPS location aware
-* Discover messages
+* Read geo-tagged messages
 * Post message
 * Comments
 * Instagram Feed of local pictures

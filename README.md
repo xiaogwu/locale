@@ -3,7 +3,7 @@
 
 Synopsis
 ===
-Hyperlocal app that uses geo-location to discover local events, activites, messages, and other social media content.  Locale is a mobile-first responsive web app for discovering what's around you and posting messages and comments for other people to discover.
+Hyperlocal app that uses geo-location to discover local events, activites, messages, and other social media content.  Locale is a mobile-first responsive web app for discovering what's around you and posting messages and comments for other people to see.
 
 MVP
 ===

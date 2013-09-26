@@ -11,8 +11,9 @@ MVP
 * Read geo-tagged messages
 * Post message
 * Comments
-* Instagram feed of local pictures
-* Twitter feed of local tweets
+* Local Instagram feed
+* Local Twitter feed
+* Trending FourSquare venues
 
 
 Version2

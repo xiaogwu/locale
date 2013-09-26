@@ -11,8 +11,8 @@ MVP
 * Read geo-tagged messages
 * Post message
 * Comments
-* Instagram Feed of local pictures
-* Twitter Feed of local tweets
+* Instagram feed of local pictures
+* Twitter feed of local tweets
 
 
 Version2

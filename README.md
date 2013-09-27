@@ -19,7 +19,8 @@ MVP
 Version2
 ===
 * Foursquare feed of local checkins
-* wat2do feed of local cheap events
+* sfwat2do feed of local cheap events
 * History feed of current location
 * Augmented reality
+* Concerts/meetups and other local events
 

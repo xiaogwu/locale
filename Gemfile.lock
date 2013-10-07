@@ -95,6 +95,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.7.9)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.7.159)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     oauth2 (0.8.1)
@@ -212,6 +213,7 @@ DEPENDENCIES
   instagram
   jbuilder (~> 1.2)
   jquery-rails
+  newrelic_rpm
   omniauth-facebook
   omniauth-google-oauth2
   pg

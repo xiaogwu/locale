@@ -12,6 +12,7 @@ module HomeHelper
 
 	def initialize_foursquare_client
 		client = Foursquare2::Client.new(
+		:api_version => '20130825',
 		:client_id => "ZRGZQTQQLBZT0PGFL3H0M55LXXJT10CIOWELT0IVSU1BO4TQ", 
 		:client_secret => "0NZM1ZTO4OKARLYLJ5SRIZVPQRNOZJNJH2KWZIVHIM1OYNQJ"
 		)

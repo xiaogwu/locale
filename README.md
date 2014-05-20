@@ -3,22 +3,24 @@
 
 Synopsis
 ===
-Hyperlocal app that uses geo-location to discover local events, activites, messages, and other social media content.  User will use a mobile first responsive web app to discover and post messages and comments for other users to discover.
+Hyperlocal app that uses geo-location to discover local events, activites, messages, and other social media content.  Locale is a mobile-first responsive web app for discovering what's around you and posting messages and comments for other people to see.
 
 MVP
 ===
 * GPS location aware
-* Discover messages
+* Read geo-tagged messages
 * Post message
 * Comments
-* Instagram Feed of local pictures
-* Twitter Feed of local tweets
+* Local Instagram feed
+* Local Twitter feed
+* Trending FourSquare venues
 
 
 Version2
 ===
-* Foursquare Feed of local checkins
-* what2do Feed of local cheap events
-* History Feed of current location
-* Augment reality
+* Foursquare feed of local checkins
+* sfwat2do feed of local cheap events
+* History feed of current location
+* Augmented reality
+* Concerts/meetups and other local events
 

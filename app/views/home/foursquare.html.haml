@@ -5,7 +5,7 @@
     %div{:class => ['column_8', 'offset_3']}
       %div{:class => 'foursquare-checkin'}
         .foursquare-image
-          = image_tag("#{venue.categories.first.icon}")
+          = image_tag("#{venue.categories.first.icon.prefix}" + "bg_32" + "#{venue.categories.first.icon.suffix}")
         .foursquare-info
           = link_to "#{venue.canonicalUrl}" do
             %span.text.bold #{venue.name}
